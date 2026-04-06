@@ -1,5 +1,6 @@
 package com.example.teste.Models;
 
+import com.example.teste.Enum.TesteEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,6 +16,7 @@ public class TesteModels {
     private String endereco;
     @Column(name = "NumeroCasa")
     private int numeroCasa;
+    private TesteEnum tipo;
 
     public TesteModels() {
     }
@@ -27,6 +29,14 @@ public class TesteModels {
 
     public Long getId() {
         return id;
+    }
+
+    public TesteEnum getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TesteEnum tipo) {
+        this.tipo = tipo;
     }
 
     public String getNome() {
